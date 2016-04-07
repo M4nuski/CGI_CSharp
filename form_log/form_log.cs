@@ -6,7 +6,7 @@ namespace form_log
 {
     class Program
     {
-        //You may have to rename it to upload_files.cgi instead of .exe for safety reasons
+        //You may have to rename it to form_log.cgi instead of .exe for safety reasons
         //The server will require the interpreter of .cgi files to be set as "cmd.exe /c"
         static void Main(string[] args)
         {
