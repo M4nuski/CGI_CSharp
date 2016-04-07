@@ -6,6 +6,9 @@ namespace form_log
 {
     class Program
     {
+
+        private static CGI_Parser CGI_Data;
+
         //You may have to rename it to form_log.cgi instead of .exe for safety reasons
         //The server will require the interpreter of .cgi files to be set as "cmd.exe /c"
         static void Main(string[] args)
@@ -31,7 +34,7 @@ namespace form_log
 
             try
             {
-                var CGI_Data = new CGI_Parser();
+                CGI_Data = new CGI_Parser();
 
                 logFile.WriteLine("CGI Variables:");
                 logFile.WriteLine(StringEnumerator.StringDictionary(CGI_Data.CGI_Variables));
@@ -45,6 +48,10 @@ namespace form_log
             catch (Exception ex)
             {
                 logFile.WriteLine("Error parsing data: " + ex.Message);
+
+                CGI_Data.ReturnTextPlainHeader();
+                Console.WriteLine("Error parsing data: " + ex.Message);
+
             }
         }
     }
