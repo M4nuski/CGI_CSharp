@@ -14,7 +14,7 @@ using System.Text;
 // Real multipart and multifile support.
 // Reading of other tags inside the multipart data that comes with the file upload form.
 // Removed cross comparaison between raw data and text data.
-// 2016 Emmanuel Charette http://m4nusky.com
+// 2016 Emmanuel Charette http://www.m4nusky.com
 
 namespace CommonItems
 {
