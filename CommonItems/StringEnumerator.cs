@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Text;
 
 namespace CommonItems
@@ -7,25 +8,33 @@ namespace CommonItems
     {
         public static string StringDictionary(Dictionary<string, string> dict)
         {
-            var sb = new StringBuilder();
-            foreach (var VARIABLE in dict)
+            if (dict != null)
             {
-                sb.AppendFormat("{0}: {1}\r\n", VARIABLE.Key, VARIABLE.Value);
+                var sb = new StringBuilder();
+                foreach (var VARIABLE in dict)
+                {
+                    sb.AppendFormat("{0}: {1}\r\n", VARIABLE.Key, VARIABLE.Value);
+                }
+                return sb.ToString();
             }
-            return sb.ToString();
+            return string.Empty;
         }
 
         public static string FileInfoList(List<MultipartParser.FileStruct> Files)
         {
-            var sb = new StringBuilder();
-            foreach (var VARIABLE in Files)
+            if (Files != null)
             {
-                sb.AppendLine("Content-Type: " + VARIABLE.ContentType);
-                sb.AppendLine("Tag Name: " + VARIABLE.TagName);
-                sb.AppendLine("File Name: " + VARIABLE.FileName);
-                sb.AppendLine("File Size: " + VARIABLE.Content.Length.ToString("D"));
+                var sb = new StringBuilder();
+                foreach (var VARIABLE in Files)
+                {
+                    sb.AppendLine("Content-Type: " + VARIABLE.ContentType);
+                    sb.AppendLine("Tag Name: " + VARIABLE.TagName);
+                    sb.AppendLine("File Name: " + VARIABLE.FileName);
+                    sb.AppendLine("File Size: " + VARIABLE.Content.Length.ToString("D"));
+                }
+                return sb.ToString();
             }
-            return sb.ToString();
+            return string.Empty;
         }
     }
 }
