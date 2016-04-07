@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />		
+		<title>M4nuski/CGI_Parser/form_log Test Page</title> 
+	</head>		
+	<body>	
+	
+		<h3>POST methods</h3>	
+		
+		<form action="form_log.cgi?GETDataAddedToThePOST_url" method="POST" enctype="application/x-www-form-urlencoded">	
+			Name:<br><input type="text" name="POST_url_name"><br>
+			Email:<br><input type="text" name="POST_url_email"><br>
+			Message:<br>
+			<textarea name="POST_url_message" rows="5" cols="80"></textarea><br>		
+			<input type="submit" value="Submit / POST / URL Encoded">										
+		</form>		
+		
+		<form action="form_log.cgi?GETDataAddedToThePOST_multipart" method="POST" enctype="multipart/form-data">	
+			Name:<br><input type="text" name="POST_multipart_name"><br>
+			Email:<br><input type="text" name="POST_multipart_email"><br>
+			Message:<br>
+			<textarea name="POST_multipart_message" rows="5" cols="80"></textarea><br>		
+			<input type="submit" value="Submit / POST / Multipart">										
+		</form>			
+
+		<h3>GET method</h3>
+		
+		<form action="form_log.cgi" method="GET">	
+			Name:<br><input type="text" name="GET_name"><br>
+			Email:<br><input type="text" name="GET_email"><br>
+			Message:<br>
+			<textarea name="GET_message" rows="5" cols="80"></textarea><br>		
+			<input type="submit" value="Submit / GET">										
+		</form>	
+		
+	</body>	
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />		
+		<title>M4nuski/CGI_Parser/uplaod_files Test Page</title> 
+	</head>		
+	<body>	
+
+	<h3>Upload Files and Form Data</h3>
+	
+	<form action="upload_files.cgi" method="POST" enctype="multipart/form-data">
+		Select file(s) to upload. Max file size: 25mb.<br>
+		<input type="file" name="uplaodFiles" size="40" multiple><br>	
+
+		Description:<br>
+		<textarea name="uploadFileDesc" rows="5" cols="80"></textarea><br>
+		
+		User Name:<br>
+		<input type="text" name="uploadFileUser"><br>		
+		
+		<input type="submit" value="Upload">
+		
+	</form>
+
+	</body>	
+</html>
