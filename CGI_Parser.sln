@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "form_log", "form_log\form_l
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "upload_files", "upload_file\upload_files.csproj", "{0E7873E6-DD5B-433F-9344-B682A1BEFE2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XSendFile", "XSendFile\XSendFile.csproj", "{ADA0FDDF-518B-4654-8F46-C384C7FE2AAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0E7873E6-DD5B-433F-9344-B682A1BEFE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7873E6-DD5B-433F-9344-B682A1BEFE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7873E6-DD5B-433F-9344-B682A1BEFE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA0FDDF-518B-4654-8F46-C384C7FE2AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA0FDDF-518B-4654-8F46-C384C7FE2AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA0FDDF-518B-4654-8F46-C384C7FE2AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA0FDDF-518B-4654-8F46-C384C7FE2AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

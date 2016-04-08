@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Web;
 
 namespace CommonItems
 {
@@ -124,6 +125,10 @@ namespace CommonItems
         public void ReturnHTTPLocation(string location)
         {
             Console.Write("Location: " + location + "\n\n");
+        }
+        public void ReturnFile(string path)
+        {
+            Console.Write($"X-Sendfile: {path}\n\n");
         }
 
     }

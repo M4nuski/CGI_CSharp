@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01FB5F96-A887-412D-AE8A-82A14661608F}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{ADA0FDDF-518B-4654-8F46-C384C7FE2AAD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommonItems</RootNamespace>
-    <AssemblyName>CommonItems</AssemblyName>
+    <RootNamespace>XSendFile</RootNamespace>
+    <AssemblyName>XSendFile</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,14 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CGI_Parser.cs" />
-    <Compile Include="CSV_Parser.cs" />
-    <Compile Include="DefaultLog.cs" />
-    <Compile Include="FormatNumber.cs" />
-    <Compile Include="MultipartParser.cs" />
+    <Compile Include="..\CommonItems\CGI_Parser.cs">
+      <Link>CGI_Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonItems\DefaultLog.cs">
+      <Link>DefaultLog.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonItems\MultipartParser.cs">
+      <Link>MultipartParser.cs</Link>
+    </Compile>
+    <Compile Include="XSendFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SafeParse.cs" />
-    <Compile Include="StringEnumerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XSendFile.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
